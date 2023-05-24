@@ -36,15 +36,20 @@ choose = "Choose one of the number on the screen and tell me the number" #choose
 print(choose)
 ans = input()
 ans = int(ans)
+if ans < 11:
+  result = user * ans #the number u chose multiplied by the second number u chose
+
+if ans < 11:
+  print("The original number you chose multiplied by the number you just chose is",result)
 if ans > 10:
   print("Please choose one of the numbers on the screen!")
 
 ans = input()
 ans = int(ans)
     #rejects value that is not on screen
-result = user * ans #the number u chose multiplied by the second number u chose
 
 if ans < 11:
+  result = user * ans
   print("The original number you chose multiplied by the number you just chose is",result)
 
   
