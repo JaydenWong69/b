@@ -1,0 +1,50 @@
+Question = "Name me a number" #choose your first number
+print(Question)
+user = input()
+user = int(user) #ensures inputted value become integer
+if user > 0:
+  print("This number is a positive number") 
+if user < 0:
+  print("This number is a negative number")
+#checks if the number is positive or negative
+import math
+sqrt = math.sqrt(user)
+if sqrt == int(sqrt):
+    print("This number is a square number")
+else:
+   print("This number is not a square number")
+#checks if the number is a square number
+divisible = False
+for num in range(2,user):
+  if user % num == 0:
+    divisible = True
+    break
+if divisible == True:
+  print("It's a composite number!")
+else:
+  print("It's a prime number!")
+#checks if the number is a prime number or composite number
+squared = user**2
+print("The square of this number is", squared)
+a = 1
+#square of the number
+
+while a < 11:
+  print(a)
+  a = a + 1
+choose = "Choose one of the number on the screen and tell me the number" #choose a second number
+print(choose)
+ans = input()
+ans = int(ans)
+if ans > 10:
+  print("Please choose one of the numbers on the screen!")
+
+ans = input()
+ans = int(ans)
+    #rejects value that is not on screen
+result = user * ans #the number u chose multiplied by the second number u chose
+
+if ans < 11:
+  print("The original number you chose multiplied by the number you just chose is",result)
+
+  
