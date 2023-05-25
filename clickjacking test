@@ -1,0 +1,31 @@
+javascript:(function() {
+  var elementsWithText = document.querySelectorAll('h1, h2, h3, h4, h5, p, span, div, li, a');
+  elementsWithText.forEach(function(element) {
+    var text = element.innerText;
+    var encryptedText = '';
+    for (var i = 0; i < text.length; i++) {
+      var charCode = text.charCodeAt(i);
+      encryptedText += String.fromCharCode(charCode + 1);
+    }
+    element.innerText = encryptedText;
+  });
+
+  var password = prompt('Your files have been encrypted. Pay the ransom to decrypt them.Enter the password:');
+  if (password === 'your_password_here') {
+    var overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.color = '#fff';
+    overlay.style.fontFamily = 'Arial, sans-serif';
+    overlay.style.fontSize = '24px';
+    overlay.style.padding = '40px';
+    overlay.style.boxSizing = 'border-box';
+    overlay.style.zIndex = '9999';
+    overlay.innerText = 'Your files have been encrypted. Pay the ransom to decrypt them.';
+    document.body.appendChild(overlay);
+  }
+})();
